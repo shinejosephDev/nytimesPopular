@@ -45,7 +45,7 @@ class DetailFragment : Fragment() {
         val createdByTitleDes = binding.articleDetailsContent.createdByDes
         val sourceDes = binding.articleDetailsContent.sourceDes
         val headerImage = binding.collapsingToolbar.image
-        val btnReadMore = binding.articleDetailsContent.btnReadMore
+        val btnReadMore = binding.articleDetailsContent.tvRetry
 
         title.text = article.title
         description.text = article.abstract

@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/newsListFragment"
         android:name="com.sj.nytimespopular.presentation.ui.ListFragment"
-        android:label="fragment_news_list"
+        android:label="Popular Articles"
         tools:layout="@layout/fragment_list">
         <action
             android:id="@+id/action_newsListFragment_to_articleDetailsFragment"
@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/articleDetailsFragment"
         android:name="com.sj.nytimespopular.presentation.ui.DetailFragment"
-        android:label="fragment_article_details"
+        android:label=""
         tools:layout="@layout/fragment_detail" >
         <argument
             android:name="Article"

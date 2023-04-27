@@ -24,6 +24,7 @@
             android:id="@+id/tv_article_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/image"
             android:layout_marginBottom="8dp"
             android:layout_toStartOf="@+id/icon_right"
             android:layout_toLeftOf="@+id/icon_right"
@@ -33,7 +34,8 @@
             android:maxLines="2"
             android:text="tayyab "
             android:textColor="@android:color/black"
-            android:textSize="18sp" />
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/created_by"
@@ -41,14 +43,13 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_article_title"
             android:layout_marginBottom="8dp"
-            android:layout_toStartOf="@+id/icon_right"
-            android:layout_toLeftOf="@+id/icon_right"
             android:layout_toEndOf="@+id/image"
             android:layout_toRightOf="@+id/image"
             android:ellipsize="end"
             android:maxLines="1"
             android:text="tayyab "
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/source"
@@ -66,21 +67,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/created_by"
-            android:layout_toStartOf="@+id/icon_right"
-            android:layout_toLeftOf="@+id/icon_right" />
-
-        <ImageView
-            android:id="@+id/icon_right"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_centerInParent="true"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:src="@drawable/arrow_right" />
-
-
+            android:layout_marginEnd="20dp"
+            android:layout_toEndOf="@+id/image" />
     </RelativeLayout>
 
 </layout>
