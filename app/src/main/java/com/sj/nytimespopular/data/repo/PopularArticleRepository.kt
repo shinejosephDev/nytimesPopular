@@ -14,7 +14,7 @@ import javax.inject.Inject
 
 class PopularArticleRepository @Inject constructor(private val api: NYTimesAPI) :
     PopularArticlesImpl {
-    override suspend fun getAll(): Flow<NetworkResponse<ArrayList<Article>>> = flow {
+    override fun getAll(): Flow<NetworkResponse<ArrayList<Article>>> = flow {
         emit(NetworkResponse.Loading)
         try {
             val articles = ArrayList<Article>()

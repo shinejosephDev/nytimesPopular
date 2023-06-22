@@ -11,7 +11,7 @@ import com.sj.nytimespopular.util.TestCoroutineRule
 import com.sj.nytimespopular.util.getOrAwaitValueTest
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.test.runBlockingTest
+import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -43,7 +43,7 @@ class ArticlesViewModelTest {
 
 
     @Test
-    fun `get Articles should Return Error`() = runBlockingTest {
+    fun `get Articles should Return Error`() = runTest {
 
         `when`(getAllArticlesUseCase.getArticles()).thenReturn(
             flow {
@@ -63,7 +63,7 @@ class ArticlesViewModelTest {
 
 
     @Test
-    fun `get articles should succeed after articles are returned`() = runBlockingTest {
+    fun `get articles should succeed after articles are returned`() = runTest {
 
 
         `when`(getAllArticlesUseCase.getArticles()).thenReturn(
@@ -84,7 +84,7 @@ class ArticlesViewModelTest {
     }
 
     @Test
-    fun `get articles should return loading`() = runBlockingTest {
+    fun `get articles should return loading`() = runTest {
 
         `when`(getAllArticlesUseCase.getArticles()).thenReturn(
             flow {

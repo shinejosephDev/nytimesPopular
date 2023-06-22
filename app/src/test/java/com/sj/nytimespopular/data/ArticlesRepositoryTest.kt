@@ -7,7 +7,7 @@ import com.sj.nytimespopular.domain.data.Article
 import com.sj.nytimespopular.domain.data.NetworkResponse
 import com.sj.nytimespopular.resources.FakeArticlesRepository
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.test.runBlockingTest
+import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -27,7 +27,7 @@ class ArticlesRepositoryTest {
     }
 
     @Test
-    fun `request to get data from api succeeds`() = runBlockingTest {
+    fun `request to get data from api succeeds`() = runTest {
 
         fakeArticlesRepository.getAll().test {
 
@@ -55,7 +55,7 @@ class ArticlesRepositoryTest {
     }
 
     @Test
-    fun `request to get data from api should return loading`() = runBlockingTest {
+    fun `request to get data from api should return loading`() = runTest {
 
         fakeArticlesRepository.setShouldReturnLoading(true)
 
@@ -72,7 +72,7 @@ class ArticlesRepositoryTest {
 
 
     @Test
-    fun `request to get data from api should fail`() = runBlockingTest {
+    fun `request to get data from api should fail`() = runTest {
 
         fakeArticlesRepository.setShouldReturnError(true)
         fakeArticlesRepository.getAll().test {

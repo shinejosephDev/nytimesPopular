@@ -6,5 +6,5 @@ import javax.inject.Inject
 class GetArticlesUseCase @Inject constructor(
     private val repository: PopularArticlesImpl
 ) {
-    suspend fun getArticles() = repository.getAll()
+    fun getArticles() = repository.getAll()
 }
